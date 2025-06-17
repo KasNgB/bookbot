@@ -6,11 +6,9 @@ def count_words(text):
 
 def count_character(text):
     count = {}
-    all_char = set()
     for char in text:
-        if char.lower() not in all_char:
+        if char.lower() not in count:
             count[char.lower()] = 0
-            all_char.add(char.lower())
         count[char.lower()] += 1
     return count
 
